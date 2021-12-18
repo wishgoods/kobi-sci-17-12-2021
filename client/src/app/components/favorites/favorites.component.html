@@ -1,0 +1,16 @@
+
+<div class="full-page">
+    
+    <div class="cards">
+        <div class ="favorite-card"  *ngFor="let fav of favorites">
+            <div class= "city-name"><h4>{{fav['name']}}</h4></div>
+                
+                <div class="degree-row"><h4>{{fav['degrees']}}</h4><small>0</small> <h4>c</h4></div>
+                
+            
+            <div class= "weahter-text"><h4>{{fav['text']}}</h4></div>
+        
+        </div>
+        
+    </div>
+</div>

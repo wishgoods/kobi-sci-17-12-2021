@@ -1,0 +1,27 @@
+<div class="full-page">
+    <div class = "search-container">
+        <i class="fa fa-search" (click)="getFromApi()"></i>
+        <input [ngModel]="city_to_search" (click)="city_to_search=''" (input)="updateAutoComplete($event)" />
+    </div>
+    <div class="content-container">
+        <div class="content-row">
+            <input  class = "season-img" type="image" src="assets/summer.png" alt="sunny_season" width="48" height="48">
+            <div class= "city-details"><h4>{{city_localized_name}}</h4>
+                <div class="degree-row"><h4>{{current_degrees}}</h4><small>0</small> <h4>c</h4></div></div>
+                <div class="fill-space"></div>
+                <i class="fa fa-heart" (click)="addToFavorites()">+</i>
+        </div>
+        <div class="content-row">
+            <h1>{{weather_text}}</h1>
+        </div>
+        <div class="content-row">
+           
+           
+            <div class ="forcast-card"  *ngFor="let fc of five_days_forecast let i=index">
+                <div class= "city-details"><h4>{{forecast_choosen_days[i]}}</h4>
+                    <div class="degree-row"><h4>{{(fc['Temperature']['Minimum']['Value']+fc['Temperature']['Maximum']['Value'])/2 | number : '1.1-1'}}</h4><small>0</small> <h4>c</h4></div></div>
+            </div>
+           
+        </div>
+    </div>
+</div>

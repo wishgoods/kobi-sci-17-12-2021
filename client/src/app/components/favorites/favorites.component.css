@@ -1,0 +1,36 @@
+.cards {
+    width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    
+  }
+  
+  .weahter-text{
+      padding: 0.5rem;;
+  }
+  .favorite-card{
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem;
+    align-items: center;
+   
+}
+  
+  
+.degree-row{
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    max-height: fit-content;
+    margin-top: -2rem;
+    margin-left: 1rem;
+    
+}
+small{margin-top: 1rem;}
+  
+  

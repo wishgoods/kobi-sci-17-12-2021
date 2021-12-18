@@ -1,0 +1,8 @@
+<div class="header-container">
+    <h4>Herolo Weather Task</h4>
+    <div class="fill-space"></div>
+    <div class="buttons-container"  >
+        <i class="fa fa-home" [ngStyle]="{'color':!toggle_color ? 'grey' : 'black' }" (click)="toggleHome()" ></i>
+        <i class="fa fa-heart" [ngStyle]="{'color':toggle_color ? 'grey' : 'black' }" (click)="toggleFavorite()"></i>
+    </div>
+</div>

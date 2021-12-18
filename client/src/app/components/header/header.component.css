@@ -1,0 +1,39 @@
+.header-container
+{
+   
+   display: inline-flex;
+    border: solid 2px black;
+    width: 100%;
+    height: fit-content;
+   
+}
+.fill-space{
+    width: 100%;
+}
+.buttons-container
+{
+    display: flex;
+    flex-direction: row;
+    border: solid 2px black;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.1rem;
+    margin-top :1rem;;
+    margin-right: 1rem;
+}
+h4{
+    float: left;
+   
+    min-width: fit-content;
+    
+}
+i{
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    font-size: 1.2rem;
+    
+}
+#home-icon{
+    
+    color: grey;
+}
