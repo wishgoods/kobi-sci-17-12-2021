@@ -23,10 +23,16 @@
 }
 h4{
     float: left;
-   
+   margin-left: 3vw;
     min-width: fit-content;
     
+    animation: fade 2s linear;
 }
+
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+  }
 i{
     padding-left: 0.3rem;
     padding-right: 0.3rem;

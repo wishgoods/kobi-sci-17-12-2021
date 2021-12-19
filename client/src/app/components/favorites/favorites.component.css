@@ -3,7 +3,10 @@
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-around; 
+    align-content: space-evenly; 
+    
     
   }
   
@@ -15,7 +18,7 @@
     flex-direction: column;
     border: solid 2px black;
     width: fit-content;
-    height: fit-content;
+    height: auto;
     margin: 1rem;
     align-items: center;
    

@@ -23,6 +23,8 @@ export class WeahterContentComponent implements OnInit {
   day_of_the_week:string = ''
   five_days_forecast:any[] = []
   weather_text:string = ''
+  c_f = 'c';
+
   constructor(private http:HttpClient) {
     
     switch (new Date().getDay()) {
@@ -77,7 +79,7 @@ export class WeahterContentComponent implements OnInit {
           this.five_days_forecast = five_days['DailyForecasts']
           
           this.five_days_forecast.forEach(element => {
-            this.forecast_choosen_days.push(this.forecasts_days[new Date(element['Date']).getDay()]);
+            this.forecast_choosen_days.push(this.forecasts_days[new Date(element['Date']).getDay()].substring(0,3));
             
           });
          });        
@@ -94,5 +96,19 @@ export class WeahterContentComponent implements OnInit {
       "degrees": this.current_degrees
      }).subscribe((result: any) => {
      });
+  }
+  changeDegreesToggle()
+  {
+    if(this.metric_imperial=='Metric')
+    {
+      this.metric_imperial='Imperial';
+      this.c_f = 'f';
+    }else
+    { 
+      this.metric_imperial='Metric';
+      this.c_f = 'c';
+    }
+    this.getFromApi();
+    document.documentElement.style.setProperty('--black-color', '#141313');
   }
 }

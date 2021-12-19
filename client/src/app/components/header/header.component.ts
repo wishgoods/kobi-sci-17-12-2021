@@ -9,11 +9,11 @@ export class HeaderComponent implements OnInit {
   toggle_color:boolean=false;
   constructor() 
   {
-    this.toggleFavorite()
+    this.toggleHome()
    }
 
   ngOnInit(): void {
-    this.toggleFavorite()
+    
   }
   toggleHome(){
     if(!this.toggle_color)

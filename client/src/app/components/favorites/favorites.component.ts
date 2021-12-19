@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,14 +14,22 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getFromApi()
  
+ 
+}
+  removeFromFavorites(fav:any){
+    
+    this.http.put(this.server_apiUrl+'removeFromFavorites',fav).subscribe((result: any) => {
+      this.getFromApi()
+    });
+ 
+  }
+  getFromApi(){
     this.http.get(this.server_apiUrl+"getAllFavorites",{responseType:'json'}).subscribe(result=>{
       let fav :any= result
       this.favorites = fav['data']['favorites']
   });
- 
- 
- 
   }
   ngAfterViewInit() {
 

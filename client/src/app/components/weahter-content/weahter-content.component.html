@@ -11,15 +11,24 @@
                 <div class="fill-space"></div>
                 <i class="fa fa-heart" (click)="addToFavorites()">+</i>
         </div>
+        <div class="spaced-no-content-row"></div>
         <div class="content-row">
             <h1>{{weather_text}}</h1>
+        </div>
+        <div class="switch-content-row">
+            <small class="degree_mode">Celcius</small>
+            <label class="switch">
+                <input type="checkbox" (click)="changeDegreesToggle()">
+                <span class="slider round"></span>
+              </label>
+              <small class="degree_mode">Farenhite</small>
         </div>
         <div class="content-row">
            
            
             <div class ="forcast-card"  *ngFor="let fc of five_days_forecast let i=index">
                 <div class= "city-details"><h4>{{forecast_choosen_days[i]}}</h4>
-                    <div class="degree-row"><h4>{{(fc['Temperature']['Minimum']['Value']+fc['Temperature']['Maximum']['Value'])/2 | number : '1.1-1'}}</h4><small>0</small> <h4>c</h4></div></div>
+                    <div class="degree-row"><h4>{{(fc['Temperature']['Minimum']['Value']+fc['Temperature']['Maximum']['Value'])/2 | number : '1.1-1'}}</h4><small>0</small> <h4>{{c_f}}</h4></div></div>
             </div>
            
         </div>
